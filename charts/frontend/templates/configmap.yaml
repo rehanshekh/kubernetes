@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap
+data:
+  nginxconf.conf: |
+      {{ include "config" . | indent 2 }}
